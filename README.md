@@ -1,6 +1,10 @@
-# VolleyBaTTle (working title)
+# VolleyBaTTle
 
 [![VolleyBaTTle title screen](docs/screenshot.jpg)](https://adong.github.io/volleyball-teddy/)
+
+Beach volleyball, brother vs brother: jump, spike and dive. 1 or 2 players.
+
+**中文：** 兄弟对决沙滩排球：跳、扣、扑救。单人或双人。
 
 Press **?** any time (or tap the round **?** button on the left edge) to see the keys. The game waits while you look.
 Tap the language button under it (the A文 icon) to switch between English and 中文; the dashboard and every game remember the choice.
