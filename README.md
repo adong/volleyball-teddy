@@ -3,7 +3,7 @@
 [![VolleyBaTTle title screen](docs/screenshot.jpg)](https://adong.github.io/volleyball-teddy/)
 
 Press **?** any time (or tap the round **?** button on the left edge) to see the keys. The game waits while you look.
-Tap **中文 / EN** under it to switch between English and 中文 (the dashboard and every game remember the choice).
+Tap the language button under it (the A文 icon) to switch between English and 中文; the dashboard and every game remember the choice.
 
 A beach volleyball game for Teddy and Tommy, played like the classic 1997 two-player volleyball game: one player on each side of the net, a big bouncy ball, jump to hit it, spike it at the top of your jump, and dive to save the low ones. Whoever lets the ball touch the sand on their side loses the point.
 
