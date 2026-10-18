@@ -2,6 +2,8 @@
 
 [![VolleyBaTTle title screen](docs/screenshot.jpg)](https://adong.github.io/volleyball-teddy/)
 
+Press **?** any time (or tap the round **?** button on the left edge) to see the keys. The game waits while you look.
+
 A beach volleyball game for Teddy and Tommy, played like the classic 1997 two-player volleyball game: one player on each side of the net, a big bouncy ball, jump to hit it, spike it at the top of your jump, and dive to save the low ones. Whoever lets the ball touch the sand on their side loses the point.
 
 It's built with Claude Code from plain JavaScript and Three.js, on the shared Claude Games kit. There are no image, model or audio files: the players are the kit's blocky characters, every texture is painted on a canvas, and every sound is synthesised.
