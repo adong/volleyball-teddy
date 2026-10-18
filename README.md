@@ -3,6 +3,7 @@
 [![VolleyBaTTle title screen](docs/screenshot.jpg)](https://adong.github.io/volleyball-teddy/)
 
 Press **?** any time (or tap the round **?** button on the left edge) to see the keys. The game waits while you look.
+Tap **中文 / EN** under it to switch between English and 中文 (the dashboard and every game remember the choice).
 
 A beach volleyball game for Teddy and Tommy, played like the classic 1997 two-player volleyball game: one player on each side of the net, a big bouncy ball, jump to hit it, spike it at the top of your jump, and dive to save the low ones. Whoever lets the ball touch the sand on their side loses the point.
 
@@ -13,7 +14,7 @@ Either player can call the other brother in as a companion. He runs onto your si
 ## Play
 
 - **Double-click `index.html`.** It works offline because Three.js and the kit are copied into `kit/`. Without internet the title font falls back to Arial Black.
-- **Send one file:** `dist/volleyball-teddy.html` is the whole game inlined, about 760 KB. AirDrop or email it, then open it in a browser.
+- **Send one file:** `dist/volleyball-teddy.html` is the whole game inlined, about 790 KB. AirDrop or email it, then open it in a browser.
 - Rebuild that file after any edit: `python3 kit/tools/bundle.py . --name volleyball-teddy`
 
 On the title screen:

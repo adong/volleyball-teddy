@@ -58,7 +58,7 @@
   .nmrow { display: flex; align-items: center; gap: 6px; }
   .right .nmrow { flex-direction: row-reverse; }
   .nm { font-family: var(--display); font-size: 18px; line-height: 1; -webkit-text-stroke: 1.5px var(--ink); paint-order: stroke fill; text-shadow: 0 2px 0 var(--ink); }
-  .who { font: 800 10px/1 'Rubik', sans-serif; letter-spacing: 1px; padding: 3px 6px; border-radius: 999px; background: var(--blue); border: 2px solid #fff; }
+  .who { font: 800 10px/1 'Rubik', sans-serif; letter-spacing: 1px; padding: 3px 6px; border-radius: 999px; background: var(--blue); border: 2px solid #fff; white-space: nowrap; }
   .right .who { background: var(--red); }
   /* the companion: his face, a bar for how long he stays (or how rested he is), and the key that calls him */
   .bud { display: flex; align-items: center; gap: 5px; width: 104px; pointer-events: auto; cursor: pointer; }
@@ -308,7 +308,7 @@
   </div>
   <div id="toasts"></div>
   <div id="banner" class="banner"></div>
-  <div id="replayTag" class="hidden">🎬 REPLAY<small id="replaySub">winning spike · tap to skip</small></div>
+  <div id="replayTag" class="hidden">🎬 REPLAY<small id="replaySub">the winning spike · tap to skip</small></div>
 </div>
 
 <div id="touch" class="hidden">
@@ -324,7 +324,7 @@
 </div>
 
 <div id="title" class="screen">
-  <div class="logo" id="logo"></div>
+  <div class="logo" id="logo" data-no-lang></div>
   <p class="tag">Beach volleyball for two brothers. Bounce it off your head, jump and SPIKE it, and don't let it touch your sand!</p>
   <div class="pickrow">
     <div class="pick" id="pick0"><span class="who">1P</span><button class="arr" data-d="-1" aria-label="Previous player">◀</button><img alt=""><button class="arr" data-d="1" aria-label="Next player">▶</button><span class="nm"></span><span class="pal"><img alt=""><span>+ buddy<b></b></span></span></div>
@@ -386,6 +386,7 @@
 <script src="kit/roster.js"></script>
 <script src="kit/portraits.js"></script>
 <script src="kit/sound.js"></script>
+<script src="kit/lang.js"></script>
 <script src="kit/help.js"></script>
 <script src="js/title.js"></script>
 <script src="js/engine.js"></script>
@@ -397,5 +398,6 @@
 <script src="js/sfx.js"></script>
 <script src="js/game.js"></script>
 <script src="js/keys.js"></script>
+<script src="js/zh.js"></script>
 </body>
 </html>

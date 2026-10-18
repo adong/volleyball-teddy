@@ -21,8 +21,18 @@
     'POINT!': ['#ffffff', '#fff2a8', '#ff3d7f'],
   };
 
+  // the word is drawn in the current language (Kit.lang: 'POW!' -> '砰！'); each language's texture is cached
+  const tr = (w) => (window.Kit.lang ? window.Kit.lang.t(w) : w);
+  // shrink the font until the text fits maxW pixels
+  function fitFont(g, text, size, maxW) {
+    g.font = `${size}px ${G.FONT}`;
+    const w = g.measureText(text).width;
+    if (w > maxW) g.font = `${Math.floor((size * maxW) / w)}px ${G.FONT}`;
+  }
+
   function burstTexture(word) {
-    if (burstCache[word]) return burstCache[word];
+    const label = tr(word);
+    if (burstCache[label]) return burstCache[label];
     const [c, g] = G.makeCanvas(256, 256);
     const [outer, inner, text] = STYLE[word] || STYLE['POW!'];
     const star = (r1, r2, n, fill) => {
@@ -42,24 +52,24 @@
     star(84, 52, 10, inner);
     g.translate(128, 132);
     g.rotate(-0.12);
-    const size = word.length > 5 ? 46 : 58;
-    g.font = `${size}px ${G.FONT}`;
+    fitFont(g, label, label.length > 5 ? 46 : 58, 196);
     g.textAlign = 'center';
     g.textBaseline = 'middle';
     g.lineWidth = 10;
     g.strokeStyle = '#14121f';
-    g.strokeText(word, 0, 0);
+    g.strokeText(label, 0, 0);
     g.fillStyle = text;
-    g.fillText(word, 0, 0);
-    return (burstCache[word] = G.toTexture(c));
+    g.fillText(label, 0, 0);
+    return (burstCache[label] = G.toTexture(c));
   }
 
   const wordCache = {};
-  function wordTexture(text, color) {
+  function wordTexture(word, color) {
+    const text = tr(word);
     const key = text + color;
     if (wordCache[key]) return wordCache[key];
     const [c, g] = G.makeCanvas(512, 128);
-    g.font = `64px ${G.FONT}`;
+    fitFont(g, text, 64, 480);
     g.textAlign = 'center';
     g.textBaseline = 'middle';
     g.lineJoin = 'round';
